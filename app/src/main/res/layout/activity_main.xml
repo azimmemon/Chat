@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    android:layout_marginBottom="10dp">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/header_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_toolbar_bg"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+
+            >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_screen_header"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_screen_header"
+                android:textSize="11sp"
+                android:layout_below="@+id/name"
+                android:textColor="@color/white"/>
+
+
+            <ImageView
+                android:id="@+id/audio_call"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/call_audio"/>
+
+            <ImageView
+                android:id="@+id/video_call"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toLeftOf="@+id/audio_call"
+                android:src="@drawable/video_call"
+                android:layout_marginRight="10dp"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messages_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_toolbar"
+        android:layout_above="@+id/bottom_view"
+        android:layout_margin="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+
+        <ImageView
+            android:id="@+id/send_message"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/send_message"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/type_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="@drawable/type_message_bg"
+            android:padding="7sp"
+            android:hint="@string/type_message"
+            />
+
+
+        <ImageView
+            android:id="@+id/audio_record"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/camera"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/camera"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

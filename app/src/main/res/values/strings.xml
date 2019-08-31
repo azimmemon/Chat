@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chat</string>
+
+    <string name="chat_screen_header">Group Name</string>
+    <string name="type_message_warning">Please type message</string>
+    <string name="type_message">Type a message</string>
+</resources>
